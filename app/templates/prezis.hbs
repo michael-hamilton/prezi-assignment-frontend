@@ -1,4 +1,12 @@
 <div class="col-md-6">
+
+	<div class="input-group">
+  		{{input type="text" class="form-control" value=title action="search" placeholder="Enter Prezi Name Here"}}
+  		<span class="input-group-btn">
+	       	<button class="btn btn-default" {{action "search"}} type="button">Search</button>
+	   	</span>
+	</div>
+
   	
   	{{# each model as |prezi| }}	
 	  <div class="row prezi">

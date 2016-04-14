@@ -1,0 +1,12 @@
+import Ember from 'ember';
+
+export default Ember.Controller.extend({
+	queryParams: ['title'],
+  	title: "",
+
+  	actions: {
+  		search: function() {
+  			this.send('reloadModel');
+  		}
+  	}
+});
