@@ -1,0 +1,8 @@
+.prezi {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.prezi:not(:last-child) {
+	border-bottom: 1px solid #efefef;
+}

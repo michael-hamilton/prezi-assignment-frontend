@@ -1,10 +1,16 @@
-<h1>Prezis</h1>
-{{# each model as |prezi| }}
-  <div>
-  	<p><b>{{prezi.title}}</b></p>
-  	<p>{{prezi.createdAt}}</p>
-  	<a href="{{prezi.creator.profileUrl}}">{{prezi.creator.name}}</a>
-  	<img src="{{prezi.thumbnail}}">
-  	<hr>
-  </div>
-{{/each}}
+<div class="col-md-6">
+  	
+  	{{# each model as |prezi| }}	
+	  <div class="row prezi">
+	  	<div class="col-xs-8">
+	  		<p><b>{{prezi.title}}</b></p>
+	  		<p>{{prezi.createdAt}}</p>
+	  		<p>Created By: <a href="{{prezi.creator.profileUrl}}">{{prezi.creator.name}}</a></p>
+  		</div>
+  		<div class="col-xs-4">
+	  		<img src="{{prezi.thumbnail}}" class="pull-right" height="80">
+	  	</div>
+	  </div>
+	{{/each}}
+
+</div>
