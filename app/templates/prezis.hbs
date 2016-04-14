@@ -1,0 +1,10 @@
+<h1>Prezis</h1>
+{{# each model as |prezi| }}
+  <div>
+  	<p><b>{{prezi.title}}</b></p>
+  	<p>{{prezi.createdAt}}</p>
+  	<a href="{{prezi.creator.profileUrl}}">{{prezi.creator.name}}</a>
+  	<img src="{{prezi.thumbnail}}">
+  	<hr>
+  </div>
+{{/each}}
