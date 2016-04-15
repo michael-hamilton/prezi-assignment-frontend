@@ -61,7 +61,7 @@
     "ember-export-application-global": "^1.0.4",
     "ember-load-initializers": "^0.5.0",
     "ember-resolver": "^2.0.3",
-    "loader.js": "^4.0.0"
+    "loader.js": "^4.0.0",
     "bower": "^1.7.9",
     "ember-cli": "^2.4.3"
   }
