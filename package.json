@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "ember build",
-    "start": "ember server",
+    "start": "ember serve --environment=staging --port=${PORT}",
     "test": "ember test"
   },
   "repository": "",
@@ -41,6 +41,7 @@
     "loader.js": "^4.0.0"
   },
   "dependencies": {
+    "bower": "^1.7.9",
     "ember-cli": "^2.4.3"
   }
 }
