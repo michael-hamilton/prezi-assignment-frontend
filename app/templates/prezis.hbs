@@ -1,18 +1,26 @@
-<div class="col-md-6">
+<div class="col-md-8">
 
-	<div class="input-group">
-  		{{input type="text" class="form-control" value=title action="search" placeholder="Enter Prezi Name Here"}}
-  		<span class="input-group-btn">
-	       	<button class="btn btn-default" {{action "search"}} type="button">Search</button>
-	   	</span>
+	<div class="row">
+		<div class="col-sm-8">
+			<div class="input-group">
+				{{input type="text" class="form-control" value=title action="search" placeholder="Enter Prezi Name Here"}}
+		  		<span class="input-group-btn">
+			       	<button class="btn btn-default" {{action "search"}} type="button">Search</button>
+			   	</span>
+			</div>
+		</div>
+
+		<div class="col-sm-4">
+			<button class="btn btn-link" {{action "sortBy" "createdAt"}}>Sort By: {{formatSortDirection sortDirection}}</button>
+		</div>
 	</div>
 
   	
-  	{{# each model as |prezi| }}	
+  	{{# each sortedPrezis as |prezi| }}	
 	  <div class="row prezi">
 	  	<div class="col-xs-8">
 	  		<p><b>{{prezi.title}}</b></p>
-	  		<p>{{prezi.createdAt}}</p>
+	  		<p>{{prezi.prettyDate}}</p>
 	  		<p>Created By: <a href="{{prezi.creator.profileUrl}}">{{prezi.creator.name}}</a></p>
   		</div>
   		<div class="col-xs-4">
