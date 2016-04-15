@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
   			this.send('reloadModel');
   		},
   		sortBy: function(sortProperty) {
-  			this.set('sortDirection', this.sortDirection == "asc" ? "desc" : "asc");
+  			this.set('sortDirection', this.sortDirection === "asc" ? "desc" : "asc");
   			this.set('sortProperties', [sortProperty + ":" + this.sortDirection]);
   		}
   	}

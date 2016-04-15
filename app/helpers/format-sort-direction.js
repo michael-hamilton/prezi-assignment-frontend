@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export function formatSortDirection(params) {
-	if(params[0] == 'desc') {
+	if(params[0] === 'desc') {
 		return 'Newest First';
 	}
 	else {
